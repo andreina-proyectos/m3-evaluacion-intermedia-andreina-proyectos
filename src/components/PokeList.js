@@ -1,5 +1,5 @@
 import React from 'react';
-import Pokemon from '.components/Pokemon';
+import Pokemon from './Pokemon';
 
 class PokeList extends React.Component {
   constructor(props) {
