@@ -1,4 +1,4 @@
-const PokeData [
+const PokeData = [
   {
     id: 1,
     name: 'bulbasaur',

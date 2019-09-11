@@ -8,19 +8,18 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pokedata : PokeData;
+      data : PokeData
     }
   }
 
   render() {
     return (
       <div className="wrapper">
-
-       <PokeList
-       pokedata={this.state.pokedata}
-       />
+        <PokeList
+        myPokemonListData={this.state.data}
+        />
       </div>
-    );
+    )
   }
 }
 
