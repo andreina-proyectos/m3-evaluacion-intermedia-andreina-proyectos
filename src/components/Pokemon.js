@@ -5,9 +5,6 @@ class Pokemon extends React.Component {
 
   isFavorite() {
     const isPokeFav = this.props.favorite.includes(this.props.id);
-    console.log(this.props.id);
-    console.log(this.props.favorite);
-    console.log('soy fav?', isPokeFav);
     return(
       isPokeFav? 'star' : 'star-hidden'
     )
@@ -15,11 +12,11 @@ class Pokemon extends React.Component {
   
 
   render() {
-    const {poketypes, pokename, pokeimg, favorite, id} = this.props;
+    const {poketypes, pokename, pokeimg} = this.props;
 
     return(
       <div className="container">
-        <p className={this.isFavorite()}>⭐️</p>
+        <p className={this.isFavorite()}><span role="img" aria-label="star" >⭐</span>️</p>
         <img src={pokeimg} alt={`Imagen de ${pokename}`} className="card__pokeimg"/>
         <h2 className="card__pokename">{pokename}</h2>
         <div className="types-box">
