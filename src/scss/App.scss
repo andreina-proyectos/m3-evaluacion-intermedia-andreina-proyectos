@@ -6,11 +6,7 @@
 
 body {
   height: 100vh;
-}
-
-.wrapper {
   padding: 10px;
-  height: 100%;
   text-align: center;
   background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
@@ -37,14 +33,14 @@ body {
   text-align: center;
 }
 
-.card__poketype1 {
+.types-box :first-child {
   background-color: #d16ba5;
   border-radius: 5px;
   margin:5px;
   padding:2px;
 }
 
-.card__poketype2 {
+.types-box :nth-child(2) {
   background-color: #69bff8;
   border-radius: 5px;
   margin:5px;
@@ -69,4 +65,13 @@ body {
 @keyframes mover {
   0% { transform: translateY(0); }
   100% { transform: translateY(-10px); }
+}
+
+.star-hidden {
+  margin-left: 100px;
+  display: none;
+}
+
+.star {
+  margin-left: 100px;
 }

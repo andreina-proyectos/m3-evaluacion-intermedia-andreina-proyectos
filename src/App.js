@@ -8,8 +8,27 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data : PokeData
+      data : PokeData,
+      favorite: []
     }
+    this.handlePokeClicked=this.handlePokeClicked.bind(this);
+  }
+
+  handlePokeClicked(event) {
+    const favorite = this.state.favorite;
+    const pokeId=parseInt(event.currentTarget.id);
+
+    if(favorite.includes(pokeId)) {
+      const favIndex = favorite.indexOf(pokeId);
+      favorite.splice(favIndex, 1);
+    }
+    else{
+      favorite.push(pokeId);
+    }
+
+    this.setState({
+      favorite: favorite
+    })
   }
 
   render() {
@@ -18,6 +37,8 @@ class App extends React.Component {
         <h1 className="title">Mi lista de pokemones</h1>
         <PokeList
         myPokemonListData={this.state.data}
+        handlePokeClicked={this.handlePokeClicked}
+        favorite={this.state.favorite}
         />
       </div>
     )

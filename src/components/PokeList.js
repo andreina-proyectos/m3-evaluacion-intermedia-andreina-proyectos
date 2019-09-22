@@ -9,12 +9,14 @@ class PokeList extends React.Component {
       {this.props.myPokemonListData.map(
         pokemonElement => {
         const {name, url, types, id} = pokemonElement;
-        return(  
-          <li key={id} className="poke__card">
+        return( 
+          <li id={id} onClick={this.props.handlePokeClicked} key={id} className="poke__card">
             <Pokemon
               pokename={name}
               pokeimg= {url}
               poketypes= {types}
+              favorite={this.props.favorite}
+              id={id}
             />
           </li>
         )
